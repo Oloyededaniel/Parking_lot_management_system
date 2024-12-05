@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParkingDetailsActivity">
+
+    <TextView
+        android:id="@+id/parking_lot_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Parking Lot Name"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/license_plate_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parking_lot_name"
+        android:hint="Enter License Plate Number"
+        android:inputType="text"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/duration_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/license_plate_input"
+        android:layout_marginTop="20dp"
+        android:text="Parking Duration"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TimePicker
+        android:id="@+id/duration_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/duration_label"
+        android:layout_marginTop="10dp"
+        android:format24Hour="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/buy_parking_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/duration_picker"
+        android:layout_marginTop="20dp"
+        android:background="@color/teal_200"
+        android:text="Buy Parking"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/parking_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buy_parking_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="00:00"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/parking_expiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parking_timer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Parking Expiration Time"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
